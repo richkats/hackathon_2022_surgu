@@ -1,0 +1,26 @@
+.Logo {
+  text-align: left;
+  font-weight: 800;
+  font-size: 62px;
+  
+
+  word-wrap: normal;
+  /* width: 64px; */
+
+  line-height: 92%;
+
+  color: var(--primary);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.LogoImg {
+  height: 128px;
+  width: 128px;
+}
+
+.LogoText {
+  margin-left: 12px;
+  width: 256px;
+}
