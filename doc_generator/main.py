@@ -4,29 +4,45 @@ import random
 from datetime import datetime, date
 
 
+MONTHS = {
+    1: "января",
+    2: "февраля",
+    3: "марта",
+    4: "апреля",
+    5: "мая",
+    6: "июня",
+    7: "июля",
+    8: "августа",
+    9: "сентября",
+    10: "октября",
+    11: "ноября",
+    12: "декабря"
+}
+
+
 def generate_contract_code():
-    letters = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЫЭЮЯ'
+    letters = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ'
 
     rand_string = ''.join(random.choice(letters) for i in range(2))
-    rand_nums = random.randint(100000, 999999)
-    cont_code = rand_string+'-' + str(rand_nums)
+    rand_digits = random.randint(100000, 999999)
+    contract_code = rand_string + '-' + str(rand_digits)
 
-    return cont_code
+    return contract_code
 
 
 def generate_contract(var_dict):
-    date_format = "\"%d\" %m %Y г."
     contract_code = generate_contract_code()
-    generate_contract_date = datetime.now().date()
-    end_of_contract = date(generate_contract_date.year+5, generate_contract_date.month, generate_contract_date.day)
+    gen_contract_date = datetime.now().date()
+    end_of_contract = date(gen_contract_date.year + 5, gen_contract_date.month, gen_contract_date.day)
+    month = MONTHS.get(gen_contract_date.month)
 
     variables.update(
         {
             "contract_number": contract_code,
             "city_name": "Сургут",
-            "gen_date": generate_contract_date.strftime("«%d» %m %Y г."),
-            "start_contract": generate_contract_date.strftime("«%d» %m %Y г."),
-            "end_contract": end_of_contract.strftime("«%d» %m %Y г."),
+            "gen_date": gen_contract_date.strftime(f"«%d» {month} %Y г."),
+            "start_contract": gen_contract_date.strftime(f"«%d» {month} %Y г."),
+            "end_contract": end_of_contract.strftime(f"«%d» {month} %Y г."),
             "post_addr": "628403",
             "phys_addr": "г. Сургут, пр. Ленина 1"
         }
@@ -40,7 +56,7 @@ def generate_contract(var_dict):
                 paragraph.text = paragraph.text.replace(var, var_dict[var])
 
     try:
-        contract.save("Test2.docx")
+        contract.save(f"ДОГОВОР О СОТРУДНИЧЕСТВЕ {contract_code}.docx")
     except pickle.PicklingError:
         print("Произошла ошибка при сохранении")
         return False
