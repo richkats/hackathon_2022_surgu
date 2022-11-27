@@ -33,7 +33,6 @@ def generate_contract_code():
 def generate_contract(var_dict):
     contract_code = generate_contract_code()
     gen_contract_date = datetime.now().date()
-    end_of_contract = date(gen_contract_date.year + 5, gen_contract_date.month, gen_contract_date.day)
     month = MONTHS.get(gen_contract_date.month)
 
     var_dict.update(
@@ -41,8 +40,6 @@ def generate_contract(var_dict):
             "contract_number": contract_code,
             "city_name": "Сургут",
             "gen_date": gen_contract_date.strftime(f"«%d» {month} %Y г."),
-            "start_contract": gen_contract_date.strftime(f"«%d» {month} %Y г."),
-            "end_contract": end_of_contract.strftime(f"«%d» {month} %Y г."),
             "post_addr": "628403",
             "phys_addr": "г. Сургут, пр. Ленина 1"
         }
@@ -68,6 +65,7 @@ def generate_contract(var_dict):
 
 # variables = {
 #     "organization_name": "ПИПИПА ПАПАПИ ПУПУПУ",
+#     "event_name": "25 лет СурГУ",
 #     "uni_agent_name": "Иванов Иван Иванович",
 #     "uni_agent_status": "Начальник отдела по внеучебной деятельности",
 #     "uni_agent_tel": "8(888)888-88-88",
@@ -76,5 +74,5 @@ def generate_contract(var_dict):
 #     "org_agent_tel": "9(999)999-99-99",
 #     "org_agent_mail": "example@gmail.com",
 # }
-
+#
 # generate_contract(variables)
