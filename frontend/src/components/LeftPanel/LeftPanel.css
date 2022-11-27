@@ -1,0 +1,30 @@
+.LeftPanel {
+  padding: 32px ;
+  display: flex;
+
+  gap: 12px;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.menuBtn {
+  display: flex;
+
+  aspect-ratio: 1/1;
+
+  width: 64px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+}
+
+.menuBtn:hover {
+  background-color: #D9D9D966;
+}
+
+.selected {
+  background-color: #00000044;
+}

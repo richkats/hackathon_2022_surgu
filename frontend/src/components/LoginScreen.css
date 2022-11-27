@@ -1,0 +1,131 @@
+.LoginScreen {
+  display: flex;
+  flex-direction: row;
+}
+
+.LoginScreen-Left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 50vw;
+}
+
+.LoginScreen-Left-SignUpForm {
+  height: 500px;
+  width: 400px;
+
+  border-radius: 40px;
+  background-color: white;
+}
+
+.LoginScreen-Right {
+  background-color: var(--bg);
+
+  height: 100vh;
+  width: 50vw;
+
+  margin-left: auto;
+
+  border-radius: 32px 0 0 32px;
+}
+
+.LoginScreen-RightInner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 50px 140px; */
+}
+
+.LoginScreen-Left-SignUpForm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.LoginScreen-Left-SignUpForm-Inner > h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 52px;
+}
+
+.LoginScreen-Left-SignUpForm-Inner > input {
+  margin-bottom: 16px;
+
+  width: 200px;
+
+  height: 25px;
+}
+
+.LoginScreen-Left-SignUpForm-Inner > button {
+  margin-bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+  justify-content: center;
+
+  /* margin-top: 32px; */
+  height: 40px;
+}
+
+.LoginScreen-Left-SignUpForm-Inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.Regestration {
+  position: absolute;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #0000ff20;
+
+  backdrop-filter: blur( 32px );
+}
+
+.Regestration-Form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 32px;
+
+
+
+  background-color: white;
+  border-radius: 16px;
+}
+
+.Regestration-Form > h1 {
+  width: 250px;
+}
+
+.Regestration-Form > input {
+  margin-bottom: 8px;
+}
+
+.Regestration-Form > .btn {
+  width: 100%;
+
+  justify-content: center;
+
+  height: 40px;
+}
+
+.Regestration-Form > .btn-secondary {
+  margin-top: 8px;
+}
+

@@ -1,0 +1,64 @@
+#root {
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+
+  background-color: var(--primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+  color: black;
+
+  width: 100%;
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000020;
+  border-radius: 20px;
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  /* border: 3px solid transparent; */
+}
+
+input {
+  border-radius: 16px;
+
+  border: 2px solid #EBEAED;
+
+  padding: 8px 18px;
+}
+
+textarea {
+  border-radius: 16px;
+
+  border: 2px solid #EBEAED;
+
+  padding: 8px 18px;
+}
+
+select {
+  border-radius: 16px;
+
+  background-color: var(--primary);
+  border: 2px solid #EBEAED;
+
+  color: white;
+
+  padding: 13px 18px;
+}

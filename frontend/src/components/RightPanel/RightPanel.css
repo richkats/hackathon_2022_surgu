@@ -1,0 +1,93 @@
+.RightPanel {
+  border-left: solid 4px #F6F4FC;
+  padding: 25px 32px;
+}
+
+.RightPanel-Profile {
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 64px;
+}
+
+.RightPanel-ProfileImg {
+  aspect-ratio: 1/1;
+  width: 64px;
+
+  /* margin-left: auto; */
+
+  border-radius: 16px;
+
+  box-shadow: 0px 4px 31px -7px rgba(19, 7, 159, 0.1);
+}
+
+.RightPanel-ProfileText {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 92.9%;
+  color: #000000;
+
+  
+}
+
+
+.Agent {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 32px;
+
+  width: 100%;
+}
+
+.Agent-Main {
+  margin-left: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Agent-Avatar {
+  aspect-ratio: 1/1;
+  width: 64px;
+
+  border-radius: 50%;
+}
+
+.Agent-Name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 92.9%;
+  color: #000000;
+
+  text-align: left;
+
+  margin-bottom: 6px;
+}
+
+.Agent-About {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #636363;
+
+  text-align: left;
+}
+
+.RightPanel-Agents > .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.Agent-Delete {
+  margin-left: auto;
+
+  background: transparent;
+  border: 0;
+}
