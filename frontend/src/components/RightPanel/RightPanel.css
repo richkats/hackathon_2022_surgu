@@ -11,8 +11,6 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 240px;
-
   margin-bottom: 64px;
 }
 
@@ -20,7 +18,7 @@
   aspect-ratio: 1/1;
   width: 64px;
 
-  margin-left: auto;
+  /* margin-left: auto; */
 
   border-radius: 16px;
 

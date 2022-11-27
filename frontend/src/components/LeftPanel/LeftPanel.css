@@ -24,3 +24,7 @@
 .menuBtn:hover {
   background-color: #D9D9D966;
 }
+
+.selected {
+  background-color: #00000044;
+}

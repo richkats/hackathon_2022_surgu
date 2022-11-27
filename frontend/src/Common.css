@@ -32,6 +32,7 @@ h1 {
 
 .btn:hover   {
   background-color: #002140;
+  cursor: pointer;
 }
 
 .btn:active   {

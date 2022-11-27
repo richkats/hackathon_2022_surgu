@@ -1,16 +1,43 @@
-import "./LeftPanel.css"
+import "./LeftPanel.css";
 
-import {ReactComponent as Logo1} from "./1.svg"
-import {ReactComponent as Logo2} from "./2.svg"
-import {ReactComponent as Logo3} from "./3.svg"
+import { ReactComponent as IconEvents } from "./icoEvents.svg";
+import { ReactComponent as IconSettings } from "./icoSettings.svg";
+import { ReactComponent as IconLogOut } from "./icoLogOut.svg";
 
-function LeftPanel() {
+import { useState } from "react";
 
-  return ( 
+function LeftPanel({ onChange }) {
+  const [page, setpage] = useState("Main");
+
+  return (
     <div className="LeftPanel">
-      <div className="menuBtn"><Logo1/></div>
-      <div className="menuBtn"><Logo2/></div>
-      <div className="menuBtn"><Logo3/></div>
+      <div
+        className={`menuBtn ${page === "Main" ? "selected" : ""}`}
+        onClick={() => {
+          setpage("Main");
+          if (onChange != null) onChange("Main");
+        }}
+      >
+        <IconEvents />
+      </div>
+      <div
+        className={`menuBtn ${page === "Settings" ? "selected" : ""}`}
+        onClick={() => {
+          setpage("Settings");
+          if (onChange != null) onChange("Settings");
+        }}
+      >
+        <IconSettings />
+      </div>
+      <div
+        className={`menuBtn ${page === "Logout" ? "selected" : ""}`}
+        onClick={() => {
+          setpage("Logout");
+          if (onChange != null) onChange("Logout");
+        }}
+      >
+        <IconLogOut />
+      </div>
     </div>
   );
 }
