@@ -40,7 +40,7 @@ def generate_contract(var_dict):
             "contract_number": contract_code,
             "city_name": "Сургут",
             "gen_date": gen_contract_date.strftime(f"«%d» {month} %Y г."),
-            "post_addr": "628403",
+            "post_addr": "628408",
             "phys_addr": "г. Сургут, пр. Ленина 1"
         }
     )
