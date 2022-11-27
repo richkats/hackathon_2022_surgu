@@ -7,4 +7,7 @@ ddt = Dadata(DADATA_TOKEN)
 
 def get_name_by_inn(inn: str):
     result = ddt.find_by_id("party", inn)
-    return result[0]['value'] if len(result) > 0 else None
+    return result if len(result) > 0 else None
+
+
+print(get_name_by_inn("7728437776"))
